@@ -11,7 +11,7 @@ If you have a question that you can't find in here, feel free to create an issue
 
 We can also define Quantum Computing without making any comparison to classical computing: 
 > Quantum Computing is a computational paradigm which evaluates computational problems by exploiting
-> quantum-mechanical properties in order to process states simulatneously and filtering out the solutions.
+> quantum-mechanical properties in order to process states simultaneously and filtering out the solutions.
 
 
 ### Who can use Quantum Computing?

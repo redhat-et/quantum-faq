@@ -1,7 +1,14 @@
-## How Do Quantum Computers Differ From Classical Computers?
+## Simulating Quantum Computers
 
-Quantum Computers are wired differently. Specifically, operations that occur in a Quantum Computer must be reversible, meaning that computing the circuit in one direction with some given inputs X and obtaining outputs Y, computing in the opposite direction with Y as your inputs must yield X as your outputs. This creates a constraint: quantum circuits must have the same amount of inputs as they do outputs, even when you are given multiple inputs and wish to receive a single output. 
 
-Quantum Computers may be thought of as Linear Algebra machines. Computationally, our state is represented via a vector known as “[the statevector](statevector.md).” Each quantum gate within the circuit is essentially a matrix that gets multiplied to our vector as the circuit progresses through its computation, similar to a Markov process. Once we reach the end of the circuit, we obtain a probability distribution from our statevector representing the likelihood of the qubits collapsing into those states. 
+Quantum Computers can be simulated on classical machines by representing a quantum system using a [statevector](./statevector.md) and evolving it by performing a matrix multiplication on the statevector against each of the quantum gates.
 
-Often mentioned in discussions about Quantum Computing is the power to compute problems that would otherwise take millennia to solve on a classical computer. So how come we can simulate quantum circuits? As we established earlier, the state of our quantum circuit is described as a statevector, and computations are carried out through matrix multiplication. Specifically, the size of the statevector as well as the matrices needed to carry out the computations are of size `2^N`, where `N` is the number of qubits in our system. For example, if we have a 32-qubit quantum circuit, then we would need a statevector of size `4294967296`, whose memory impact would be: `sizeof(statevector)=232*sizeof(complex_number)`. For useful applications, we may need thousands, if not hundreds of thousands, of qubits, which translates into `2^1000 ~= 10^301` states needing to be stored simultaneously if we were doing this on a classical machine. For reference, the known universe only has approximately `10^82` atoms, so this would be like storing `10^219` unique representations of the observed universe. 
+### Limitations 
+Unfortunately, our ability to simulate quantum computers is limited by the statevector's size growing exponential with the number of qubits in the system, specifically: `2^n`, where `n` is the number of qubits in the system.
+
+
+### References
+- [Simulating Quantum Computers with Qiskit](https://qiskit.org/documentation/tutorials/simulators/1_aer_provider.html)
+- [IBM Quantum Simulators](https://www.ibm.com/quantum-computing/simulator/)
+- [Quantum Simulators](https://en.wikipedia.org/wiki/Quantum_simulator)
+- [Limitations of Simulating Quantum Circuits](https://link.aps.org/doi/10.1103/PhysRevX.10.041038)

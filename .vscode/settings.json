@@ -1,7 +1,9 @@
 {
 	"cSpell.words": [
-		"statevector",
+		"qiskit",
+		"qubit",
 		"qubits",
-		"qubit"
+		"statevector",
+		"statevectors"
 	]
 }
